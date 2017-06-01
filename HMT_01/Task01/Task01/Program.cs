@@ -1,4 +1,6 @@
-﻿namespace Task01
+﻿using System.Text;
+
+namespace Task01
 {
 	using System;
 	using System.Threading;
@@ -15,7 +17,7 @@
 		}
 	}
 
-	class Program
+	class Program //todo pn ты, видимо, неправильно понял правила оформления: для каждой домашки 1 солюшн, в котором столько проектов, сколько заданий в домашке. Переделай согласно требованиям к оформлению.
 	{
 		private static bool IsInCircle(Point center, double radius, Point point, bool withBounds)
 		{
@@ -132,6 +134,9 @@
 
 		private static void Main(string[] args)
 		{
+			Console.InputEncoding = Encoding.Unicode;//todo pn без явного задания кодировки будет использована кодировка по умолчанию. Машина, на которой я проверяю настроена на английскую культуру, поэтому кириллические символы отображаются в ней как знаки вопроса. Следует учитывать такое специфичное поведение консоли в следующих заданиях :)/
+			Console.OutputEncoding = Encoding.Unicode;
+
 			Point point;
 			char figure;
 			bool result = true;

@@ -1,4 +1,6 @@
-﻿namespace Task02
+﻿using System.Text;
+
+namespace Task02
 {
 	using System;
 	using System.Threading;
@@ -64,6 +66,9 @@
 
 		private static void Main(string[] args)
 		{
+			Console.InputEncoding = Encoding.Unicode;
+			Console.OutputEncoding = Encoding.Unicode;
+
 			double h;
 
 			while (true)
