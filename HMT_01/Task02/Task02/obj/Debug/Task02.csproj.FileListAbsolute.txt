@@ -1,5 +1,0 @@
-c:\users\admin\documents\visual studio 2017\Projects\Task02\Task02\bin\Debug\Task02.exe.config
-c:\users\admin\documents\visual studio 2017\Projects\Task02\Task02\bin\Debug\Task02.exe
-c:\users\admin\documents\visual studio 2017\Projects\Task02\Task02\bin\Debug\Task02.pdb
-c:\users\admin\documents\visual studio 2017\Projects\Task02\Task02\obj\Debug\Task02.exe
-c:\users\admin\documents\visual studio 2017\Projects\Task02\Task02\obj\Debug\Task02.pdb
