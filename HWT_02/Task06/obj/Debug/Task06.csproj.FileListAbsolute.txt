@@ -1,0 +1,5 @@
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\HWT_02\Task06\bin\Debug\Task06.exe.config
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\HWT_02\Task06\bin\Debug\Task06.exe
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\HWT_02\Task06\bin\Debug\Task06.pdb
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\HWT_02\Task06\obj\Debug\Task06.exe
+C:\Users\Admin\Documents\Visual Studio 2017\Projects\HWT_02\Task06\obj\Debug\Task06.pdb
