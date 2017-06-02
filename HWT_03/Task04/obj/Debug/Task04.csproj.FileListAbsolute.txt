@@ -1,0 +1,5 @@
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_03\Task04\bin\Debug\Task04.exe.config
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_03\Task04\bin\Debug\Task04.exe
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_03\Task04\bin\Debug\Task04.pdb
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_03\Task04\obj\Debug\Task04.exe
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_03\Task04\obj\Debug\Task04.pdb
