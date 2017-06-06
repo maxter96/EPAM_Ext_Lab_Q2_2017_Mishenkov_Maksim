@@ -1,0 +1,13 @@
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_04\Task03\bin\Debug\Task03.exe.config
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_04\Task03\bin\Debug\Task03.exe
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_04\Task03\bin\Debug\Task03.pdb
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_04\Task03\obj\Debug\Task03.exe
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_04\Task03\obj\Debug\Task03.pdb
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_04\Task03\bin\Debug\Screens\screen01.png
+D:\Отчеты\HWT_04\Task03\bin\Debug\Screens\screen01.png
+D:\Отчеты\HWT_04\Task03\bin\Debug\Task03.exe.config
+D:\Отчеты\HWT_04\Task03\bin\Debug\Task03.exe
+D:\Отчеты\HWT_04\Task03\bin\Debug\Task03.pdb
+D:\Отчеты\HWT_04\Task03\obj\Debug\Task03.csprojResolveAssemblyReference.cache
+D:\Отчеты\HWT_04\Task03\obj\Debug\Task03.exe
+D:\Отчеты\HWT_04\Task03\obj\Debug\Task03.pdb
