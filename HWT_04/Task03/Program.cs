@@ -39,7 +39,7 @@
 			Console.WriteLine("Результаты:");
 			Console.WriteLine("{0,10}{1,15}{2,15}", "Размер", "With Builder", "Without");
 
-			for (n = 100; n <= 1000; n += 100)
+			for (n = 100; n <= 1000; n += 100)//todo pn для чистоты эксперимента можно было ещё в разное время позапускать и показать, что выводит.
 			{
 				Console.Write("{0, 10}", n);
 				sw.Restart();
