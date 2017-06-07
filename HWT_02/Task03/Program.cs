@@ -12,13 +12,13 @@
 			StringBuilder stars = new StringBuilder("*");
 			spaces.Append(new string(' ', n - 1));
 
-			Console.WriteLine("{0}{1}", spaces.ToString(), stars.ToString());
+			Console.WriteLine("{0}{1}", spaces.ToString(), stars.ToString());//todo pn ToString здесь не нужен
 
 			for (int i = 1; i < n; i++)
 			{
 				spaces.Remove(spaces.Length - 1, 1);
 				stars.Append("**");
-				Console.WriteLine("{0}{1}", spaces.ToString(), stars.ToString());
+				Console.WriteLine("{0}{1}", spaces.ToString(), stars.ToString());//todo pn ToString здесь не нужен
 			}
 		}
 

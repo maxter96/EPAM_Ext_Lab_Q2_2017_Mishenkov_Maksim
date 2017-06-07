@@ -21,7 +21,7 @@
 				string input = Console.ReadLine();
 				string[] data = input.Split(' ');
 
-				a = int.Parse(data[0]);
+				a = int.Parse(data[0]);//todo pn упадет здесь, если пользователь введет не число
 				b = int.Parse(data[1]);
 
 				if (a <= 0 || b <= 0)

@@ -12,7 +12,7 @@
 			Console.OutputEncoding = Encoding.Unicode;
 			TextInfo info = new TextInfo();
 
-			while (true)
+			while (true)//todo pn как пользователь программно выйдет из консоли? он может бояться нажать на крестик.
 			{
 				Console.Clear();
 				Console.WriteLine("Параметры надписи: {0}", info.GetInfo());
