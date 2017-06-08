@@ -4,3 +4,9 @@ c:\users\admin\documents\visual studio 2017\Projects\HWT_02\Task01\bin\Debug\Tas
 c:\users\admin\documents\visual studio 2017\Projects\HWT_02\Task01\obj\Debug\Task01.csprojResolveAssemblyReference.cache
 c:\users\admin\documents\visual studio 2017\Projects\HWT_02\Task01\obj\Debug\Task01.exe
 c:\users\admin\documents\visual studio 2017\Projects\HWT_02\Task01\obj\Debug\Task01.pdb
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_02\Task01\bin\Debug\Task01.exe.config
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_02\Task01\bin\Debug\Task01.exe
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_02\Task01\bin\Debug\Task01.pdb
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_02\Task01\obj\Debug\Task01.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_02\Task01\obj\Debug\Task01.exe
+C:\Users\Admin\Source\Repos\EPAM_Ext_Lab_Q2_2017_Mishenkov_Maksim\HWT_02\Task01\obj\Debug\Task01.pdb

@@ -21,8 +21,12 @@
 				string input = Console.ReadLine();
 				string[] data = input.Split(' ');
 
-				a = int.Parse(data[0]);//todo pn упадет здесь, если пользователь введет не число
-				b = int.Parse(data[1]);
+				if (!int.TryParse(data[0], out a) || !int.TryParse(data[1], out b))
+				{
+					Console.WriteLine("Введены некорректные данные! Введите снова.");
+					Thread.Sleep(1500);
+					continue;
+				}
 
 				if (a <= 0 || b <= 0)
 				{

@@ -12,7 +12,7 @@
 			Console.OutputEncoding = Encoding.Unicode;
 			TextInfo info = new TextInfo();
 
-			while (true)//todo pn как пользователь программно выйдет из консоли? он может бояться нажать на крестик.
+			while (true)
 			{
 				Console.Clear();
 				Console.WriteLine("Параметры надписи: {0}", info.GetInfo());
@@ -26,9 +26,10 @@
 				}
 
 				Console.WriteLine("\t{0}: Очистить параметры", counter);
+				Console.WriteLine("\t0: Выйти из программы");
 				string input = Console.ReadLine();
 				int menuIndex = 0;
-
+				
 				if (!int.TryParse(input, out menuIndex))
 				{
 					Console.WriteLine("Некорректный ввод! Попробуйте снова.");
