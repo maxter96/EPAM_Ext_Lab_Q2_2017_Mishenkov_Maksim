@@ -26,7 +26,7 @@
 				sideC = c;
 			}
 
-			perimeter = sideA + sideB + sideC;
+			perimeter = sideA + sideB + sideC; //todo pn довольно спорная логика. В данном случае решение корректное, потому что вычисления не займут много времени. Но если есть какие-то длительные операции, что лучше их в соответствующие методы размещать, а не в конструкторе.
 			double half = perimeter / 2;
 			area = Math.Sqrt(half * (half - sideA) * (half - sideB) * (half - sideC));
 		}
