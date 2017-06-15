@@ -22,5 +22,7 @@
                 Radius,
                 GetArea());
         }
-    }
+
+		//todo pn а где ShowInfo()?
+	}
 }

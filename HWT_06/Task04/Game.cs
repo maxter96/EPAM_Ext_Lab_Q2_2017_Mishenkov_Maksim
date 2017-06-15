@@ -45,7 +45,7 @@
 			throw new NotImplementedException();
 		}
 
-		public bool IsWinner()
+		public bool IsWinner()//todo pn покажи, где собираешься использовать этот метод (в каком месте ты будешь определять, выиграл ли игрок)
 		{
 			throw new NotImplementedException();
 		}

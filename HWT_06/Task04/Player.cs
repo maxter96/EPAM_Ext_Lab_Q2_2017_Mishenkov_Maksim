@@ -25,7 +25,7 @@
 			this.direction = direction;
 		}
 
-		public void Move()
+		public void Move()//todo pn хоть бы Direction в качестве входного передал
 		{
 			throw new NotImplementedException();
 		}

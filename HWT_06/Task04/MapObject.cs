@@ -25,7 +25,7 @@
 			get { return y; }
 		}
 
-		public virtual void Kill()
+		public virtual void Kill()//todo pn "убей себя" чтоли (молодец, если так)? если нет, то входные параметры нужны
 		{
 			throw new NotImplementedException();
 		}

@@ -52,7 +52,7 @@
                 Radius);
         }
 
-        public void ShowInfo()
+        public void ShowInfo()//todo pn у тебя этот метод повторяется 3 раза с одинаковым телом. Мб стоит вынести его в базовый класс для всех фигур?
         {
             Console.WriteLine(this);
         }

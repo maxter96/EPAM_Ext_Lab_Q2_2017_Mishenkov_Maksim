@@ -7,7 +7,7 @@ namespace Task01
 	{
 		public static Dictionary<Post, string> Posts = new Dictionary<Post, string>
 		{
-			[Post.GeneralDirector] = "Генеральный директор",
+			[Post.GeneralDirector] = "Генеральный директор",//todo pn костыль. См. в enum Post
 			[Post.Analyst] = "Аналитик",
 			[Post.ProjectManager] = "Менеджер проекта",
 			[Post.SoftwareTester] = "Тестировщик",
@@ -52,7 +52,7 @@ namespace Task01
 			if (!Employee.Posts.ContainsKey(Post))
 				throw new Exception("Неизвестная должность!");
 			string post = Employee.Posts[Post];
-			return base.ToString() + string.Format("\nСтаж (в годах): {0}; Должность: {1}.", workExperience, post);
+			return base.ToString() + string.Format("\nСтаж (в годах): {0}; Должность: {1}.", workExperience, post);//todo pn обращаться следует не к приватному workExperience, а к публичному WorkExperience (из-за возможных модификаций получения значения)
 		}
 	}
 }
