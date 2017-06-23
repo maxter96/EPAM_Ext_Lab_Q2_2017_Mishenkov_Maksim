@@ -6,13 +6,14 @@
 	{
 		private int x;
 		private int y;
-		private Map map;
+		protected Map map;
 
 		public MapObject(int x, int y, Map map)
 		{
 			this.x = x;
 			this.y = y;
 			this.map = map;
+            IsAlive = true;
 		}
 
 		public int X
@@ -34,5 +35,7 @@
 		{
 			throw new NotImplementedException();
 		}
+
+        public bool IsAlive { get; set; }
 	}
 }

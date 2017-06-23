@@ -22,8 +22,18 @@
 
 		public void Move()
 		{
-			throw new NotImplementedException();
-		}
+            FindPathToPlayer();
+            
+            if (map[X,Y] != null)
+            {
+                Collide(map[X, Y]);
+            }
+
+            if (IsAlive)
+            {
+                // движение по направлению Direction
+            }
+        }
 
 		protected virtual Direction FindPathToPlayer()
 		{

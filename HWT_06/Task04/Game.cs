@@ -37,7 +37,10 @@
 
 		public void MoveObjects()
 		{
-			throw new NotImplementedException();
+			foreach (IMovable obj in objects)
+            {
+                obj.Move();
+            }
 		}
 
 		private bool IsMapContainsPickUps()
@@ -45,14 +48,15 @@
 			throw new NotImplementedException();
 		}
 
+		
 		public bool IsWinner()//todo pn покажи, где собираешься использовать этот метод (в каком месте ты будешь определять, выиграл ли игрок)
 		{
-			throw new NotImplementedException();
+            get { return IsMapContainsPickUps() && IsPlayerAlive; }
 		}
 
-		public bool IsPlayerAlive()
+		public bool IsPlayerAlive
 		{
-			throw new NotImplementedException();
+            get { return player.IsAlive; }
 		}
 	}
 }
