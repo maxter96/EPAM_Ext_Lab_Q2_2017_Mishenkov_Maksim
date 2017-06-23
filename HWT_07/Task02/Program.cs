@@ -4,7 +4,7 @@
 	using System.Collections.Generic;
 	using System.Text;
 
-	public class Program
+	public class Program //todo pn ну, "частота встречаемости" имелось в виду написать количество вхождений каждого слова, но пусть будет как ты реализовал.
 	{
 		private static string[] ParseText(string text)
 		{
