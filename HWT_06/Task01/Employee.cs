@@ -1,18 +1,11 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Collections.Generic;
 
 namespace Task01
 {
 	class Employee : User
 	{
-		public static Dictionary<Post, string> Posts = new Dictionary<Post, string>
-		{
-			[Post.GeneralDirector] = "Генеральный директор",//todo pn костыль. См. в enum Post
-			[Post.Analyst] = "Аналитик",
-			[Post.ProjectManager] = "Менеджер проекта",
-			[Post.SoftwareTester] = "Тестировщик",
-			[Post.SoftwareEngineer] = "Разработчик"
-		};
 
 		private int workExperience;
 
@@ -49,10 +42,11 @@ namespace Task01
 
 		public override string ToString()
 		{
-			if (!Employee.Posts.ContainsKey(Post))
-				throw new Exception("Неизвестная должность!");
-			string post = Employee.Posts[Post];
-			return base.ToString() + string.Format("\nСтаж (в годах): {0}; Должность: {1}.", workExperience, post);//todo pn обращаться следует не к приватному workExperience, а к публичному WorkExperience (из-за возможных модификаций получения значения)
+            var type = typeof(Post);
+            var fieldInfo = type.GetField(this.Post.ToString());
+            var attributes = (DescriptionAttribute[])fieldInfo.GetCustomAttributes(typeof(DescriptionAttribute), false);
+            var strPost = attributes[0].Description;
+			return base.ToString() + string.Format("\nСтаж (в годах): {0}; Должность: {1}.", WorkExperience, strPost);
 		}
 	}
 }

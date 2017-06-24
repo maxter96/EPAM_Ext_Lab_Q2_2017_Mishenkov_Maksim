@@ -27,6 +27,7 @@
 
 		public void Move()//todo pn хоть бы Direction в качестве входного передал
 		{
+            // движение будет происходить по направлению direction - поле класса
 			throw new NotImplementedException();
 		}
 

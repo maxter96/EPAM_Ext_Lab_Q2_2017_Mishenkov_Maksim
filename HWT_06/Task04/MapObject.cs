@@ -28,6 +28,7 @@
 
 		public virtual void Kill()//todo pn "убей себя" чтоли (молодец, если так)? если нет, то входные параметры нужны
 		{
+            // да, вызов метода убивает этот объект
 			throw new NotImplementedException();
 		}
 

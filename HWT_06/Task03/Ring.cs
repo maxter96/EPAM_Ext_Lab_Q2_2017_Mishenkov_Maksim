@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class Ring : IDrawable, IFillable
+    public class Ring : Figure, IFillable
     {
         private const double DefaultInnerRadius = 1;
         private const double DefaultOuterRadius = 1;
@@ -43,7 +43,7 @@
             outerRound = new Round(x, y, outerRadius);
         }
 
-        public double X
+        public new double X
         {
             get
             {
@@ -57,7 +57,7 @@
             }
         }
 
-        public double Y
+        public new double Y
         {
             get
             {
@@ -74,11 +74,6 @@
         public double GetArea()
         {
             return outerRound.GetArea() - innerRound.GetArea();
-        }
-
-        public void ShowInfo()
-        {
-            Console.WriteLine(this);
         }
 
         public override string ToString()

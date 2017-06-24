@@ -4,11 +4,15 @@ namespace Task01
 {
 	enum Post
 	{
-		[Description("Генеральный директор")]//todo pn лучше уж так
+		[Description("Генеральный директор")]
 		GeneralDirector,
-		Analyst,
-		ProjectManager,
-		SoftwareTester,
-		SoftwareEngineer
+        [Description("Аналитик")]
+        Analyst,
+        [Description("Менеджер проекта")]
+        ProjectManager,
+        [Description("Тестировщик")]
+        SoftwareTester,
+        [Description("Разработчик")]
+        SoftwareEngineer
 	}
 }

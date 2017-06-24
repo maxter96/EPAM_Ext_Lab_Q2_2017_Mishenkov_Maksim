@@ -2,17 +2,15 @@
 {
     using System;
 
-    public class Rectangle : IDrawable, IFillable
+    public class Rectangle : Figure, IFillable
     {
         private const double DefaultWidth = 1;
         private const double DefaultHeight = 1;
         private double width;
         private double height;
 
-        public Rectangle(double x, double y, double width, double height)
+        public Rectangle(double x, double y, double width, double height) : base(x, y)
         {
-            X = x;
-            Y = y;
             Width = width;
             Height = height;
         }
@@ -22,10 +20,6 @@
             Width = DefaultWidth;
             Height = DefaultHeight;
         }
-
-        public double X { get; set; }
-
-        public double Y { get; set; }
 
         public double Width
         {
@@ -65,11 +59,6 @@
 
                 height = value;
             }
-        }
-
-        public void ShowInfo()
-        {
-            Console.WriteLine(this);
         }
 
         public override string ToString()

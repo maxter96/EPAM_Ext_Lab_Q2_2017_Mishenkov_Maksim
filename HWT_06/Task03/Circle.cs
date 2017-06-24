@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class Circle : IDrawable
+    public class Circle : Figure
     {
         private const double DefaultRadius = 1;
         private double radius;
@@ -12,16 +12,10 @@
             Radius = DefaultRadius;
         }
 
-        public Circle(double x, double y, double radius)
+        public Circle(double x, double y, double radius) : base(x,y)
         {
-            X = x;
-            Y = y;
             Radius = radius;
         }
-
-        public double X { get; set; }
-
-        public double Y { get; set; }
 
         public double Radius
         {
@@ -50,11 +44,6 @@
                 X,
                 Y,
                 Radius);
-        }
-
-        public void ShowInfo()//todo pn у тебя этот метод повторяется 3 раза с одинаковым телом. Мб стоит вынести его в базовый класс для всех фигур?
-        {
-            Console.WriteLine(this);
         }
     }
 }
