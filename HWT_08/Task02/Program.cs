@@ -1,4 +1,6 @@
-﻿namespace Task02
+﻿using System.Text;
+
+namespace Task02
 {
 	using System;
 
@@ -6,6 +8,9 @@
 	{
 		private static void Main(string[] args)
 		{
+			Console.InputEncoding = Encoding.Unicode;
+			Console.OutputEncoding = Encoding.Unicode;
+
 			Office office = new Office();
 			Person tom = new Person("Tom");
 			Person sam = new Person("Sam");

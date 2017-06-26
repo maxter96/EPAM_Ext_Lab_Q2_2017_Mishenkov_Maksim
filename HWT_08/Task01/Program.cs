@@ -36,7 +36,7 @@
 			}
 		}
 
-		private static void ShowStrings(string[] strings)
+		private static void ShowStrings(string[] strings) //todo pn чот не работает. Строки до и после сортировки в том же порядке.
 		{
 			Console.WriteLine("Строки после сортировки:");
 			foreach (string str in strings)
