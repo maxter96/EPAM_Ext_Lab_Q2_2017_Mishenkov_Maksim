@@ -25,7 +25,7 @@
 		{
 			if (time.Hour < MorningTime)
 			{
-				Console.WriteLine("\'Доброе утро, {0}!\' - сказал {1}", person.Name, this.Name);
+				Console.WriteLine("\'Доброе утро, {0}!\' - сказал {1}", person.Name, this.Name);//todo pn в отдельном классе не должно быть зависимостей от других классов (в твоём случае от класса вывода данных)
 			}
 			else if (time.Hour < EveningTime)
 			{
