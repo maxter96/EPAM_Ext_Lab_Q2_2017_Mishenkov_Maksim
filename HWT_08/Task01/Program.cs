@@ -1,7 +1,6 @@
 ﻿namespace Task01
 {
 	using System;
-	using System.Collections.Generic;
 	using System.Text;
 
 	public class Program
@@ -36,7 +35,7 @@
 			}
 		}
 
-		private static void ShowStrings(string[] strings) //todo pn чот не работает. Строки до и после сортировки в том же порядке.
+		private static void ShowStrings(string[] strings)
 		{
 			Console.WriteLine("Строки после сортировки:");
 			foreach (string str in strings)
@@ -49,32 +48,20 @@
 		{
 			Console.InputEncoding = Encoding.Unicode;
 			Console.OutputEncoding = Encoding.Unicode;
-			List<string> strings = new List<string>();
 
 			while (true)
 			{
-				strings.Clear();
 				Console.Clear();
 				Console.WriteLine("Введите слова (для окончания ввода - пустая строка)\n");
 
-				while (true)
-				{
-					string input = Console.ReadLine();
+                string input = Console.ReadLine();
 
-					if (input == string.Empty)
-					{
-						break;
-					}
-
-					strings.Add(input);
-				}
-
-				if (strings.Count == 0)
+				if (input == string.Empty)
 				{
 					return;
 				}
 
-				string[] array = strings.ToArray();
+				string[] array = input.Split(' ');
 				SortStrings(array, CompareStrings);
 				ShowStrings(array);
 				Console.ReadKey();

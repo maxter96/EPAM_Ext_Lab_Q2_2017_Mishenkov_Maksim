@@ -6,7 +6,7 @@
 
 	public delegate void SayGoodBye(Person person);
 
-	public class Office
+	public class Office : IConsole
 	{
 		private SayHello sayHello;
 
@@ -24,27 +24,28 @@
 
 		public void Came(Person person, DateTime dateTime)
 		{
-			Console.WriteLine("[Пришел {0}. Время {1} часов]", person.Name, dateTime.Hour);
+            ShowString(string.Format("[Пришел {0}. Время {1} часов]", person.Name, dateTime.Hour));
 
 			if (PersonCame != null)
 			{
 				PersonCame(person, new CameEventArgs(dateTime));
 			}
 
-			Console.WriteLine();
-		}
+            ShowString(string.Empty);
+        }
 
 		public void Leave(Person person)
 		{
-			Console.WriteLine("[Ушел {0}]", person.Name);
+			ShowString(string.Format("[Ушел {0}]", person.Name));
 
 			if (PersonLeave != null)
 			{
 				PersonLeave(person, new EventArgs());
 			}
 
-			Console.WriteLine();
-		}
+            ShowString(string.Empty);
+
+        }
 
 		public void OnPersonCame(object sender, CameEventArgs args)
 		{
@@ -53,7 +54,7 @@
 			if (sayHello != null)
 			{
 				sayHello(person, args.DateTime);
-			}
+            }
 
 			sayHello += person.SayHello;
 			sayGoodBye += person.SayGoodbye;
@@ -67,8 +68,13 @@
 
 			if (sayGoodBye != null)
 			{
-				sayGoodBye(person);
-			}
+                sayGoodBye(person);
+            }
 		}
-	}
+
+        public void ShowString(string str)
+        {
+            Console.WriteLine(str);
+        }
+    }
 }

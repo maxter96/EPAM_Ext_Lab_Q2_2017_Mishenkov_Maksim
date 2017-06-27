@@ -8,11 +8,6 @@
 
 		public CameEventArgs(DateTime dateTime)
 		{
-			if (dateTime == null)//todo pn так-то DateTime - значимый тип
-			{
-				this.dateTime = DateTime.Now;
-			}
-
 			this.dateTime = dateTime;
 		}
 
