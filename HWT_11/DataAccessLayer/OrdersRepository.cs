@@ -43,7 +43,7 @@
 					while (reader.Read())
 					{
 						var order = new Order();
-						order.OrderID = (int)reader["OrderID"];
+						order.OrderID = (int)reader["OrderID"];//todo pn для перестраховки можно обработку исключения invalidCastExeption добавить (мы в базе можем с int на smallint заменить например)
 						order.CustomerID = (string)reader["CustomerID"];
 						order.EmployeeID = (int)reader["EmployeeID"];
 
@@ -90,7 +90,7 @@
 					"ORDER BY p.ProductID;";
 
 				var orderIdParam = command.CreateParameter();
-				orderIdParam.ParameterName = "@orderId";
+				orderIdParam.ParameterName = "@orderId";//todo pn .AddWithValue не понравился?
 				orderIdParam.DbType = DbType.Int32;
 				orderIdParam.Value = orderId;
 				command.Parameters.Add(orderIdParam);
@@ -147,9 +147,9 @@
 				{
 					return (int)command.ExecuteScalar();
 				}
-				catch
+				catch//todo pn не нужно перехватывать все исключительные ситуации. лучше перехватить SQLException
 				{
-					return DefaultIntValue;
+					return DefaultIntValue;//todo pn немного странная логика, если у нас что-то пошло не так и запись не создалась, для чего нам возвращать ИД? Лучше пусть выбросится исключение, которое мы обработаем не здесь, а на уровень выше.
 				}
 			}
 		}
@@ -266,13 +266,21 @@
 				{
 					while (reader.Read())
 					{
-						var detail = new CustomerOrderDetail();
-						detail.ProductName = (string)reader["ProductName"];
-						detail.UnitPrice = (decimal)reader["UnitPrice"];
-						detail.Quantity = (short)reader["Quantity"];
-						detail.Discount = (int)reader["Discount"];
-						detail.ExtendedPrice = (decimal)reader["ExtendedPrice"];
-						details.Add(detail);
+						//var detail = new CustomerOrderDetail();
+						//detail.ProductName = (string)reader["ProductName"];
+						//detail.UnitPrice = (decimal)reader["UnitPrice"];
+						//detail.Quantity = (short)reader["Quantity"];
+						//detail.Discount = (int)reader["Discount"];
+						//detail.ExtendedPrice = (decimal)reader["ExtendedPrice"];
+						//details.Add(detail);
+						details.Add(new CustomerOrderDetail //todo pn так экономнее писать
+						{
+							ProductName = (string)reader["ProductName"],
+							UnitPrice = (decimal)reader["UnitPrice"],
+							Quantity = (short)reader["Quantity"],
+							Discount = (int)reader["Discount"],
+							ExtendedPrice = (decimal)reader["ExtendedPrice"]
+					});
 					}
 				}
 			}
