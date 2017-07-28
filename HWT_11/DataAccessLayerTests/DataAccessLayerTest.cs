@@ -58,7 +58,7 @@
 					"FROM Northwind.Products AS p " +
 					"JOIN Northwind. [Order Details] AS od " +
 					"ON p.ProductID = od.ProductID " +
-					"WHERE od.OrderID = 10285 " +
+					"WHERE od.OrderID = 10285 " +//todo pn хардкод (мало ли у тебя тестовая база изменится и придется шерстить все тесты на наличие подобных вставок)
 					"ORDER BY p.ProductID;";
 				connection.Open();
 
@@ -135,7 +135,7 @@
 					"FROM Northwind.Orders AS o " +
 					"JOIN Northwind.[Order Details] AS od " +
 					"ON o.OrderID = od.OrderID " +
-					"WHERE o.OrderID = 10285; ";
+					"WHERE o.OrderID = 10285; ";//todo pn аналогично
 
 				connection.Open();
 				sumQuantity = (int)command.ExecuteScalar();
