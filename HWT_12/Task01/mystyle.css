@@ -1,0 +1,20 @@
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style-type: none;
+    margin: 10px;
+    color: #8d0105;
+    background-color: #fae498;
+}
+
+div {
+    width: 200px;
+    background-color: #fae498;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px #8d0105;
+    box-sizing: border-box;
+}
