@@ -1,4 +1,4 @@
-header, footer, .content, .menu, .signIn {
+﻿header, footer, .content, .menu, .signIn {
     box-sizing: border-box;
     border: 1px solid black;
     padding: 5px;
@@ -7,35 +7,29 @@ header, footer, .content, .menu, .signIn {
 .content, .menu, .signIn {
     border-top: none;
     border-right: none;
-}
-
-.wrapper {
-    padding-left: 200px;
-    padding-right: 200px;
-    overflow: hidden;
-}
-
-.menu, .content, .signIn {
-    position: relative;
-    float: left;
     padding-bottom: 20005px;
     margin-bottom: -20000px;
 }
 
-.content {
-    width: 100%;
-    text-align: justify;
+.wrapper {
+    overflow: hidden;
+    min-width: 900px;
 }
 
 .menu {
+    float: left;
     width: 200px;
-    right: 200px;
-    margin-left: -100%;
+}
+
+.content {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: justify;
 }
 
 .signIn {
     width: 200px;
-    margin-right: -200px;
+    float: right;
     border-right: 1px solid black;
 }
 
@@ -50,12 +44,13 @@ header, footer, .content, .menu, .signIn {
 
 footer {
     clear: both;
-    position: relative;
+    min-width: 900px;
 }
 
 header {
     height: 100px;
     text-align: center;
+    min-width: 900px;
 }
 
 h1, h2 {
@@ -78,10 +73,6 @@ img {
 .content ul {
     list-style-type: square;
     margin-left: 40px;
-}
-
-.content li {
-
 }
 
 .content table {
