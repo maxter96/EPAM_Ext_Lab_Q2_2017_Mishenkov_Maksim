@@ -1,0 +1,30 @@
+.buttons, .timer, .title {
+    text-align: center;
+    border: 5px outset darkblue;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px;
+    background-color: darkslategray;
+}
+
+.title {
+    color: aliceblue;
+}
+
+.timer {
+    font-family: 'Courier New';
+    font-size: 36px;
+    font-weight: bold;
+    color: red;
+}
+
+input {
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+}
+
+.timer p {
+    margin: 20px;
+    height: 40px;
+}

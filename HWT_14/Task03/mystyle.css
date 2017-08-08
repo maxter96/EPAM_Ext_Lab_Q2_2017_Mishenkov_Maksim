@@ -1,0 +1,39 @@
+.leftList, .buttons, .rightList {
+    float: left;
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid green;
+    border-radius: 10px;
+    background-color: lemonchiffon;
+    margin-right: 20px;
+}
+
+.list {
+    float: left;
+    margin: 20px;
+}
+
+.buttons {
+    text-align: center;
+    width: 100px;
+}
+
+.list select {
+    width: 100%;
+    height: 75%;
+    margin: 0px;
+}
+
+.list p {
+    margin: 0px;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+
+.list input {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}

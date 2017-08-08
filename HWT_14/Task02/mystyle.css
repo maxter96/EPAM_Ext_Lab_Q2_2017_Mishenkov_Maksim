@@ -1,0 +1,12 @@
+p, input {
+    font-family: Arial;
+    font-size: 24px;
+}
+
+#inputData {
+    width: 400px;
+}
+
+#inputData, #outputData {
+    color: blue;
+}
