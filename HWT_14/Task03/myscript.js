@@ -1,4 +1,5 @@
-﻿$(function()
+//забыл снимать выделение при перемещении айтемов. см. требования.
+$(function()
 {
     BindButtonsForList("list1");
     BindButtonsForList("list2");
