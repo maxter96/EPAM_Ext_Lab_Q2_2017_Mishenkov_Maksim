@@ -13,11 +13,11 @@ namespace WebApplication.Models
 		public string ProductName { get; set; }
 
 		[DisplayName("Количество")]
-		[Range(1, 20, ErrorMessage = "Количество должно быть от 1 до 20")]
+		[Range(1, 20, ErrorMessage = "Количество должно быть от 1 до 20")]//todo pn сообщение в ресурсы
 		public int Quantity { get; set; }
 
 		[DisplayName("Скидка")]
-		[Range(0.0f, 1.0f, ErrorMessage = "Скидка должна быть от 0.0 до 0.1!")]
+		[Range(0.0f, 1.0f, ErrorMessage = "Скидка должна быть от 0.0 до 0.1!")]//todo pn сообщение в ресурсы
 		public decimal Discount { get; set; }
 	}
 }

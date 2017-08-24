@@ -6,7 +6,7 @@ using DataAccessLayer;
 
 namespace WebApplication.Controllers
 {
-	public class HomeController : Controller
+	public class HomeController : Controller//todo pn мог бы и переименовать)
 	{
 		public ActionResult Index()
 		{
@@ -20,7 +20,7 @@ namespace WebApplication.Controllers
 			{
 				var viewOrder = Mapper.Map<DataAccessLayer.Models.Order,
 					Models.OrderViewModel>(order);
-				viewOrder.Sum = rep.GetOrderDetails(order.OrderID).Sum(x => x.Sum).ToString("F");
+				viewOrder.Sum = rep.GetOrderDetails(order.OrderID).Sum(x => x.Sum).ToString("F");//todo pn такое обычно на уровне базы делается. 
 				viewOrders.Add(viewOrder);
 			}
 
@@ -41,7 +41,7 @@ namespace WebApplication.Controllers
 
 			if (order == null)
 			{
-				string message = "Заказа с таким ID не существует!";
+				string message = "Заказа с таким ID не существует!";//todo pn в ресурсы
 				return RedirectToAction("ErrorMessage", message);
 			}
 
@@ -83,7 +83,7 @@ namespace WebApplication.Controllers
 				rep.DeleteOrder(order);
 			}
 
-			return Json("Successful");
+			return Json("Successful");//todo pn в enum
 		}
 
 		public ActionResult EditOrder(int? orderId)
@@ -106,7 +106,7 @@ namespace WebApplication.Controllers
 
 			if (order == null)
 			{
-				string message = "Заказа с таким ID не существует!";
+				string message = "Заказа с таким ID не существует!";//todo pn в ресурсы
 				return RedirectToAction("ErrorMessage", message);
 			}
 

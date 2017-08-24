@@ -8,13 +8,13 @@ namespace WebApplication.Models
 	{
 		public int OrderID { get; set; }
 
-		[Remote("CheckCustomerID", "Home", ErrorMessage = "Такого покупателя не существует")]
+		[Remote("CheckCustomerID", "Home", ErrorMessage = "Такого покупателя не существует")]//todo pn сообщение в ресурсы
 		[Required(ErrorMessage = "Поле не должно быть пустым!")]
 		[DisplayName("ID заказчика")]
-		[StringLength(10, MinimumLength = 3, ErrorMessage = "Длина должна быть от 3 до 10 символов!")]
+		[StringLength(10, MinimumLength = 3, ErrorMessage = "Длина должна быть от 3 до 10 символов!")]//todo pn сообщение в ресурсы
 		public string CustomerID { get; set; }
 
-		[Remote("CheckEmployeeID", "Home", ErrorMessage = "Такого продавца не существует")]
+		[Remote("CheckEmployeeID", "Home", ErrorMessage = "Такого продавца не существует")]//todo pn сообщение в ресурсы
 		[Required(ErrorMessage = "Введите число!")]
 		[DisplayName("ID продавца")]
 		public int EmployeeID { get; set; }
