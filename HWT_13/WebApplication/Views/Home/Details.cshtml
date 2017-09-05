@@ -1,0 +1,86 @@
+﻿@model WebApplication.Models.FullOrderViewModel
+
+@{
+    ViewBag.Title = "Детальная информация";
+}
+
+<h2>Детальная информация</h2>
+
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog"></div>
+</div>
+
+<table class="table table-bordered">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.OrderID)</th>
+        <td>@Html.DisplayFor(model => model.OrderID)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.CustomerID)</th>
+        <td>@Html.DisplayFor(model => model.CustomerID)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.CompanyName)</th>
+        <td>@Html.DisplayFor(model => model.CompanyName)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.EmployeeID)</th>
+        <td>@Html.DisplayFor(model => model.EmployeeID)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.EmployeeName)</th>
+        <td>@Html.DisplayFor(model => model.EmployeeName)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.OrderDate)</th>
+        <td>@Html.DisplayFor(model => model.OrderDate)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.RequiredDate)</th>
+        <td>@Html.DisplayFor(model => model.RequiredDate)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.ShippedDate)</th>
+        <td>@Html.DisplayFor(model => model.ShippedDate)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Status)</th>
+        <td>@Html.DisplayFor(model => model.Status)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.ShipCountry)</th>
+        <td>@Html.DisplayFor(model => model.ShipCountry)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.ShipCity)</th>
+        <td>@Html.DisplayFor(model => model.ShipCity)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.ShipAddress)</th>
+        <td>@Html.DisplayFor(model => model.ShipAddress)</td>
+    </tr>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.ShipName)</th>
+        <td>@Html.DisplayFor(model => model.ShipName)</td>
+    </tr>
+</table>
+
+<h2>Список позиций заказа</h2>
+
+@Html.Action("GetDetails", "Home", new { orderID = Model.OrderID })
+
+@Html.ActionLink("Добавить продукт", "CreateProduct", new { orderId = Model.OrderID }, htmlAttributes: new
+{
+    @class = "btn btn-primary btn-sm",
+    @role = "button",
+    @id = "createBtn"
+})
+
+@Html.ActionLink("Назад к списку заказов", "Index", null, htmlAttributes: new
+{
+    @class = "btn btn-default btn-sm",
+    @role = "button",
+})
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/modalWindow.js")

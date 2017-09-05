@@ -1,0 +1,88 @@
+﻿@model PagedList.IPagedList<WebApplication.Models.OrderViewModel>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Список заказов";
+}
+
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog"></div>
+</div>
+
+<h2>Список заказов</h2>
+
+<p>
+    @Html.ActionLink("Добавить заказ", "EditOrder", null, htmlAttributes: new {
+        @class = "btn btn-primary btn-sm",
+        @role = "button",
+        @id = "createBtn"
+    })
+
+    @Html.Label("Удалить выбранные", new
+    {
+        @class = "btn btn-danger btn-sm",
+        @role = "button",
+        @id = "deleteBtn"
+    })
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().OrderID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().CompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().OrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstOrDefault().Sum)
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.CheckBox("deleteOrder", false, new { orderID = item.OrderID })
+                @Html.DisplayFor(modelItem => item.OrderID)
+            </td>
+            <td>
+                @Html.ActionLink(item.CompanyName, "EditOrder", new { orderId = item.OrderID }, new { @class = "editBtn" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sum)
+            </td>
+            <td>
+                @Html.ActionLink("Подробнее", "Details", new { orderID = item.OrderID }, 
+                    htmlAttributes: new {
+                        @class = "btn btn-info btn-sm",
+                        @role = "button"
+                    })
+            </td>
+        </tr>
+    }
+</table>
+
+Страница @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) из @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/Scripts/deleteConfirmation.js")
+@Scripts.Render("~/Scripts/modalWindow.js")
+
