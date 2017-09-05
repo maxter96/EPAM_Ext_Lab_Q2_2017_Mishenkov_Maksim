@@ -1,0 +1,5 @@
+﻿CREATE TABLE [TestInfo].[Theme]
+(
+	[ThemeID] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [ThemeName] NVARCHAR(50) NOT NULL
+)

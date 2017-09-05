@@ -1,0 +1,11 @@
+﻿@if (User.IsInRole("Admin"))
+{
+    <li>@Html.ActionLink("Рейтинг пользователей", "Rating", "User")</li>
+    <li>@Html.ActionLink("Темы", "Themes", "Management")</li>
+    <li>@Html.ActionLink("Тесты", "Tests", "Management")</li>
+}
+else if (User.IsInRole("User"))
+{
+    <li>@Html.ActionLink("Мои тесты", "MyTests", "User")</li>
+    <li>@Html.ActionLink("Рейтинг пользователей", "Rating", "User")</li>
+}

@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BTN_Apply" xml:space="preserve">
+    <value>Применить</value>
+  </data>
+  <data name="BTN_BackToAttempts" xml:space="preserve">
+    <value>Вернуться к попыткам</value>
+  </data>
+  <data name="BTN_BackToTests" xml:space="preserve">
+    <value>Вернуться к тестам</value>
+  </data>
+  <data name="BTN_BackToThemes" xml:space="preserve">
+    <value>Вернуться к темам</value>
+  </data>
+  <data name="BTN_Cancel" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
+  <data name="BTN_ContinueAttempt" xml:space="preserve">
+    <value>Продолжить попытку</value>
+  </data>
+  <data name="BTN_Create" xml:space="preserve">
+    <value>Создать</value>
+  </data>
+  <data name="BTN_CreateQuestion" xml:space="preserve">
+    <value>Создать вопрос</value>
+  </data>
+  <data name="BTN_CreateTest" xml:space="preserve">
+    <value>Создать тест</value>
+  </data>
+  <data name="BTN_CreateTheme" xml:space="preserve">
+    <value>Создать тему</value>
+  </data>
+  <data name="BTN_Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="BTN_EndTest" xml:space="preserve">
+    <value>Закончить тест</value>
+  </data>
+  <data name="BTN_LogOn" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="BTN_Register" xml:space="preserve">
+    <value>Зарегистрироваться</value>
+  </data>
+  <data name="BTN_SeeResult" xml:space="preserve">
+    <value>Посмотреть результаты</value>
+  </data>
+  <data name="BTN_StartNewAttempt" xml:space="preserve">
+    <value>Начать новую попытку</value>
+  </data>
+  <data name="FIELD_AnswerText" xml:space="preserve">
+    <value>Текст ответа</value>
+  </data>
+  <data name="FIELD_AttemptNumber" xml:space="preserve">
+    <value>Номер попытки</value>
+  </data>
+  <data name="FIELD_AttemptsCount" xml:space="preserve">
+    <value>Количество попыток</value>
+  </data>
+  <data name="FIELD_IsCorrect" xml:space="preserve">
+    <value>Верный</value>
+  </data>
+  <data name="FIELD_Login" xml:space="preserve">
+    <value>Логин</value>
+  </data>
+  <data name="FIELD_Password" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="FIELD_Points" xml:space="preserve">
+    <value>Очки</value>
+  </data>
+  <data name="FIELD_QuestionsCount" xml:space="preserve">
+    <value>Количество вопросов</value>
+  </data>
+  <data name="FIELD_QuestionText" xml:space="preserve">
+    <value>Текст вопроса</value>
+  </data>
+  <data name="FIELD_QuestionType" xml:space="preserve">
+    <value>Кол-во верных ответов</value>
+  </data>
+  <data name="FIELD_RemainingAttempts" xml:space="preserve">
+    <value>Осталось попыток</value>
+  </data>
+  <data name="FIELD_Score" xml:space="preserve">
+    <value>Результат</value>
+  </data>
+  <data name="FIELD_TestName" xml:space="preserve">
+    <value>Название теста</value>
+  </data>
+  <data name="FIELD_ThemeName" xml:space="preserve">
+    <value>Название темы</value>
+  </data>
+  <data name="FIELD_Time" xml:space="preserve">
+    <value>Затраченное время (мин.)</value>
+  </data>
+  <data name="FIELD_TimeLimit" xml:space="preserve">
+    <value>Время на выполнение (мин.)</value>
+  </data>
+  <data name="FIELD_UserName" xml:space="preserve">
+    <value>Имя пользователя</value>
+  </data>
+  <data name="TITLE_HomePage" xml:space="preserve">
+    <value>Главная страница</value>
+  </data>
+  <data name="TITLE_LogOn" xml:space="preserve">
+    <value>Вход</value>
+  </data>
+  <data name="TITLE_MyAttempts" xml:space="preserve">
+    <value>Мои попытки</value>
+  </data>
+  <data name="TITLE_MyTests" xml:space="preserve">
+    <value>Тесты пользователя</value>
+  </data>
+  <data name="TITLE_Rating" xml:space="preserve">
+    <value>Рейтинг</value>
+  </data>
+  <data name="TITLE_Register" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
+  <data name="TITLE_RunTest" xml:space="preserve">
+    <value>Выполнение теста</value>
+  </data>
+  <data name="TITLE_Test" xml:space="preserve">
+    <value>Тест</value>
+  </data>
+  <data name="TITLE_TestCreating" xml:space="preserve">
+    <value>Создание теста</value>
+  </data>
+  <data name="TITLE_TestSessionResults" xml:space="preserve">
+    <value>Результаты попытки</value>
+  </data>
+  <data name="TITLE_TestsList" xml:space="preserve">
+    <value>Список тестов</value>
+  </data>
+  <data name="TITLE_Theme" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="TITLE_ThemesList" xml:space="preserve">
+    <value>Список тем</value>
+  </data>
+  <data name="MES_Attempt" xml:space="preserve">
+    <value>Попытка #</value>
+  </data>
+  <data name="MES_CommonRating" xml:space="preserve">
+    <value>Общий рейтинг</value>
+  </data>
+  <data name="MES_CreateQuestion" xml:space="preserve">
+    <value>Создать вопрос</value>
+  </data>
+  <data name="MES_CreateTheme" xml:space="preserve">
+    <value>Создать тему</value>
+  </data>
+  <data name="MES_EnterAnswerText" xml:space="preserve">
+    <value>Введите текст ответа</value>
+  </data>
+  <data name="MES_EnterQuestionText" xml:space="preserve">
+    <value>Введите текст вопроса</value>
+  </data>
+  <data name="MES_IsSelected" xml:space="preserve">
+    <value>Выбрано</value>
+  </data>
+  <data name="MES_RemainingTime" xml:space="preserve">
+    <value>Осталось времени</value>
+  </data>
+  <data name="MES_Result" xml:space="preserve">
+    <value>Результат</value>
+  </data>
+  <data name="MES_SearchQuestion" xml:space="preserve">
+    <value>Поиск по вопросам</value>
+  </data>
+  <data name="MES_SearchTest" xml:space="preserve">
+    <value>Поиск по тестам</value>
+  </data>
+  <data name="MES_SearchTheme" xml:space="preserve">
+    <value>Поиск по темам</value>
+  </data>
+  <data name="MES_SearchThemeAndQuestion" xml:space="preserve">
+    <value>Поиск по темам и вопросам</value>
+  </data>
+  <data name="MES_SearchUser" xml:space="preserve">
+    <value>Поиск по пользователям</value>
+  </data>
+  <data name="MES_TestQuestions" xml:space="preserve">
+    <value>Вопросы теста</value>
+  </data>
+  <data name="ERROR_QuestionContainsInTest" xml:space="preserve">
+    <value>Вопрос содержится в тодном из тестов! Удалите тест!</value>
+  </data>
+  <data name="ERROR_QuestionExists" xml:space="preserve">
+    <value>Такой вопрос уже существует в теме!</value>
+  </data>
+  <data name="ERROR_QuestionMustContainRightAnswers" xml:space="preserve">
+    <value>Вопрос должен содержать хотя бы один верный ответ!</value>
+  </data>
+  <data name="ERROR_TestExists" xml:space="preserve">
+    <value>Тест с таким именем уже существует!</value>
+  </data>
+  <data name="ERROR_TestMustContainQuestions" xml:space="preserve">
+    <value>Тест должен содержать хотя бы один вопрос!</value>
+  </data>
+  <data name="ERROR_ThemeContainsInTest" xml:space="preserve">
+    <value>Тема содержится в одном из тестов! Удалите тест!</value>
+  </data>
+  <data name="ERROR_ThemeExists" xml:space="preserve">
+    <value>Тема с таким именем уже существует!</value>
+  </data>
+  <data name="MES_EnterLoginAndPassword" xml:space="preserve">
+    <value>Введите логин и пароль</value>
+  </data>
+  <data name="TITLE_LogOff" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="ERROR_LoginExists" xml:space="preserve">
+    <value>Пользователь с таким логином уже существует!</value>
+  </data>
+  <data name="ERROR_WrongPassword" xml:space="preserve">
+    <value>Неверный логин или пароль!</value>
+  </data>
+  <data name="TITLE_Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="ERROR_IncorrectData" xml:space="preserve">
+    <value>Введены некорректные данные</value>
+  </data>
+  <data name="FIELD_FirstName" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="FIELD_LastName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="FIELD_RepeatPassword" xml:space="preserve">
+    <value>Повтор пароля</value>
+  </data>
+</root>

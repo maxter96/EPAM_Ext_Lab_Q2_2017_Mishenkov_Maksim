@@ -1,0 +1,66 @@
+﻿@model IEnumerable<TestingSystem.Models.ThemeViewModel>
+@using TestingSystem.Resources
+
+@{
+    ViewBag.Title = Resource.TITLE_ThemesList;
+}
+
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog"></div>
+</div>
+
+<h2>@Resource.TITLE_ThemesList</h2>
+
+@Html.TextBox("SearchQuery", "", new
+{
+    @class = "form-control pull-right",
+    @id = "searchQuery",
+    @style = "margin-top: 20px; margin-bottom: 10px",
+    @placeholder = Resource.MES_SearchTheme
+})
+
+@Html.ActionLink(Resource.BTN_CreateTheme, 
+    "CreateTheme", 
+    null, 
+    new {
+        @class = "btn btn-primary",
+        @id = "createBtn",
+        @style = "margin: 20px 10px 10px 0px"
+    })
+
+<table class="table">
+    <tr class="info">
+        <th>
+            @Html.DisplayNameFor(model => model.ThemeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionsCount)
+        </th>
+        <th>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="item">
+            <td>
+                @Html.ActionLink(item.ThemeName, "ThemeDetails", new { themeId = item.ThemeID }, new { @id = "itemName" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestionsCount)
+            </td>
+            <td>
+                @Html.ActionLink(Resource.BTN_Delete, 
+                    "DeleteTheme",
+                    new { themeId = item.ThemeID },
+                    new { @class = "btn btn-danger pull-right deleteBtn" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/filterByName.js")
+@Scripts.Render("~/Scripts/modalWindow.js")
+@Scripts.Render("~/Scripts/deleteConfirmation.js")

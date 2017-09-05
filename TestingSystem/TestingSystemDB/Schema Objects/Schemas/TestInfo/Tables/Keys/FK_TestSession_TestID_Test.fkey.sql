@@ -1,0 +1,2 @@
+﻿ALTER TABLE [TestInfo].[TestSession]
+    ADD CONSTRAINT [FK_TestSession_TestID_Test] FOREIGN KEY ([TestID]) REFERENCES [TestInfo].[Test] ([TestID]) ON DELETE CASCADE ON UPDATE NO ACTION;

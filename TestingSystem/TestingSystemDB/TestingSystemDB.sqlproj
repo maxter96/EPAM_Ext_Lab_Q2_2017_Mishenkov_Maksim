@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <PostConversionRemoveFromScc>
+    </PostConversionRemoveFromScc>
+    <PostConversionAddToScc>
+    </PostConversionAddToScc>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>TestingSystemDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureDatabaseSchemaProvider</DSP>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>False</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <LoadSqlClrTypes>True</LoadSqlClrTypes>
+    <RootNamespace>Northwind</RootNamespace>
+    <DefaultSchema>dbo</DefaultSchema>
+    <PreviousProjectVersion>4.1</PreviousProjectVersion>
+    <ValidateCasingOnIdentifiers>False</ValidateCasingOnIdentifiers>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8ead86ae-81e4-495b-b07a-cc3741f05459}</ProjectGuid>
+    <GenerateDatabaseFile>False</GenerateDatabaseFile>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <SqlServerVerification>True</SqlServerVerification>
+    <TargetLanguage>CS</TargetLanguage>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <AnsiNullDefault>True</AnsiNullDefault>
+    <AnsiNulls>True</AnsiNulls>
+    <AnsiPadding>True</AnsiPadding>
+    <AnsiWarnings>True</AnsiWarnings>
+    <ArithAbort>True</ArithAbort>
+    <ConcatNullYieldsNull>True</ConcatNullYieldsNull>
+    <QuotedIdentifier>True</QuotedIdentifier>
+    <NumericRoundAbort>False</NumericRoundAbort>
+    <RecursiveTriggersEnabled>False</RecursiveTriggersEnabled>
+    <DatabaseState>ONLINE</DatabaseState>
+    <UpdateOptions>READ_WRITE</UpdateOptions>
+    <CloseCursorOnCommitEnabled>False</CloseCursorOnCommitEnabled>
+    <DefaultCursor>LOCAL</DefaultCursor>
+    <AutoClose>False</AutoClose>
+    <AutoCreateStatistics>True</AutoCreateStatistics>
+    <AutoShrink>False</AutoShrink>
+    <AutoUpdateStatistics>True</AutoUpdateStatistics>
+    <TornPageDetection>False</TornPageDetection>
+    <DatabaseAccess>MULTI_USER</DatabaseAccess>
+    <Recovery>FULL</Recovery>
+    <EnableFullTextSearch>True</EnableFullTextSearch>
+    <DatabaseChaining>False</DatabaseChaining>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <Trustworthy>False</Trustworthy>
+    <AutoUpdateStatisticsAsynchronously>False</AutoUpdateStatisticsAsynchronously>
+    <PageVerify>NONE</PageVerify>
+    <ServiceBrokerOption>DisableBroker</ServiceBrokerOption>
+    <DateCorrelationOptimizationOn>False</DateCorrelationOptimizationOn>
+    <Parameterization>SIMPLE</Parameterization>
+    <AllowSnapshotIsolation>False</AllowSnapshotIsolation>
+    <ReadCommittedSnapshot>False</ReadCommittedSnapshot>
+    <VardecimalStorageFormatOn>True</VardecimalStorageFormatOn>
+    <SupplementalLoggingOn>False</SupplementalLoggingOn>
+    <DefaultFileStreamFilegroup />
+    <IsChangeTrackingOn>False</IsChangeTrackingOn>
+    <IsChangeTrackingAutoCleanupOn>True</IsChangeTrackingAutoCleanupOn>
+    <ChangeTrackingRetentionPeriod>2</ChangeTrackingRetentionPeriod>
+    <ChangeTrackingRetentionUnit>Days</ChangeTrackingRetentionUnit>
+    <IsEncryptionOn>False</IsEncryptionOn>
+    <IsBrokerPriorityHonored>False</IsBrokerPriorityHonored>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatTSqlWarningsAsErrors>False</TreatTSqlWarningsAsErrors>
+    <SuppressTSqlWarnings />
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(SQLDBExtensionsRefPath)' == ''" />
+  <ItemGroup>
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Properties\" />
+    <Folder Include="Schema Objects\" />
+    <Folder Include="Schema Objects\Schemas\" />
+    <Folder Include="Schema Objects\Schemas\UserInfo" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Programmability" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Programmability\Defaults" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Programmability\Functions" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Programmability\Rules" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Programmability\Types" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Programmability\Types\User Defined Data Types" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Programmability\Types\User Defined Types CLR" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Programmability\Types\User Defined Table Types" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Programmability\Types\XML Schema Collections" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Tables" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Tables\Constraints" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Tables\Indexes" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Tables\Keys" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Tables\Triggers" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Tables\Statistics" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Views" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Views\Indexes" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Views\Triggers" />
+    <Folder Include="Schema Objects\Schemas\UserInfo\Views\Statistics" />
+    <Folder Include="Schema Objects\Database Level Objects\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Schemas\" />
+    <Folder Include="Schema Objects\Schemas\TestInfo" />
+    <Folder Include="Schema Objects\Schemas\TestInfo\Programmability" />
+    <Folder Include="Schema Objects\Schemas\TestInfo\Programmability\Functions" />
+    <Folder Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\Schemas\TestInfo\Tables" />
+    <Folder Include="Schema Objects\Schemas\TestInfo\Tables\Constraints" />
+    <Folder Include="Schema Objects\Schemas\TestInfo\Tables\Indexes" />
+    <Folder Include="Schema Objects\Schemas\TestInfo\Tables\Keys" />
+    <Folder Include="Schema Objects\Schemas\TestInfo\Tables\Statistics" />
+    <Folder Include="Schema Objects\Schemas\TestInfo\Tables\Triggers" />
+    <Folder Include="Schema Objects\Schemas\TestInfo\Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <BuildContributorArgument Include="OutDir=$(OutDir)" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql">
+      <SubType>NotInBuild</SubType>
+    </None>
+    <Build Include="Schema Objects\Schemas\UserInfo\Tables\Keys\FK_UserInRole_User.fkey.sql" />
+    <None Include="Scripts\Post-Deployment\User.sql" />
+    <None Include="Scripts\Post-Deployment\UserInRole.sql" />
+    <None Include="Scripts\Post-Deployment\Role.sql" />
+    <None Include="Scripts\Post-Deployment\ThemeStatistic.sql" />
+    <None Include="Scripts\Post-Deployment\TestSession.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Programmability\Stored Procedures\GetRolesForUser.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\DeleteTheme.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\CreateTestSession.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\CreateUserAnswer.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\GetThemeQuestions.proc.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Programmability\Stored Procedures\DeleteRole.proc.sql" />
+    <None Include="TestingSystemDB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Permissions.sql" />
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\UserInfo.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\UserInfo\Tables\User.table.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Tables\Role.table.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Tables\UserInRole.table.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Tables\Keys\FK_UserInRole_Role.fkey.sql" />
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\TestInfo.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Theme.table.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Question.table.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Answer.table.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Test.table.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Task.table.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\UserAnswer.table.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Keys\FK_Task_QuestionID_Question.fkey.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Keys\FK_Answer_QuestionID_Question.fkey.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Keys\FK_Task_TestID_Test.fkey.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Keys\FK_UserAnswer_TestSessionID_TestSession.fkey.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Keys\FK_UserAnswer_AnswerID_Answer.fkey.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\ThemeStatistic.table.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Programmability\Stored Procedures\CreateUser.proc.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Programmability\Stored Procedures\DeleteUser.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\TestSession.table.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Keys\FK_TestSession_TestID_Test.fkey.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Keys\FK_ThemeStatistic_ThemeID_Theme.fkey.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Keys\FK_Question_ThemeID_Theme.fkey.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Programmability\Stored Procedures\AddUserToRole.proc.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Programmability\Stored Procedures\GetAllRoles.proc.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Programmability\Stored Procedures\RemoveUserFromRole.proc.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Programmability\Stored Procedures\CreateRole.proc.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Programmability\Stored Procedures\GetUsersInRole.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\CreateTest.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\DeleteTest.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\CreateQuestion.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\DeleteQuestion.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\CreateAnswer.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\EndTestSession.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\CreateTheme.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\GetQuestionAnswers.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Views\GetUserTestPoints.view.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\GetTestQuestions.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\GetTestInfo.proc.sql" />
+    <Build Include="Schema Objects\Schemas\UserInfo\Programmability\Stored Procedures\GetUserInfo.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\GetThemeInfo.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\GetQuestionInfo.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\CreateTask.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Functions\GetAttemptsCount.func.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\DeleteUserAnswer.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\GetTestSessionInfo.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\GetUserAnswers.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Functions\GetRemainingTime.func.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Functions\GetQuestionPoints.func.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\GetUserTestSessions.proc.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Programmability\Stored Procedures\GetThemeStatistic.proc.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Release.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="TestingSystemDB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\Post-Deployment\Theme.sql" />
+    <None Include="Scripts\Post-Deployment\Question.sql" />
+    <None Include="Scripts\Post-Deployment\Answer.sql" />
+    <None Include="Scripts\Post-Deployment\Test.sql" />
+    <None Include="Scripts\Post-Deployment\UserAnswer.sql" />
+    <None Include="Scripts\Post-Deployment\Task.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Keys\FK_ThemeStatistic_TestSessionID_TestSession.fkey.sql" />
+    <Build Include="Schema Objects\Schemas\TestInfo\Tables\Keys\FK_TestSession_UserID_User.fkey.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql" />
+  </ItemGroup>
+</Project>

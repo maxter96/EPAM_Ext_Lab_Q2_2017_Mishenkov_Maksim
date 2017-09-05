@@ -1,0 +1,68 @@
+﻿@model IEnumerable<TestingSystem.Models.TestViewModel>
+@using TestingSystem.Resources
+
+@{
+    ViewBag.Title = Resource.TITLE_TestsList;
+}
+
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog"></div>
+</div>
+
+<h2>@Resource.TITLE_TestsList</h2>
+
+@Html.ActionLink(Resource.BTN_CreateTest, "CreateTest", null, new
+{
+    @class = "btn btn-primary",
+    @style = "margin: 20px 0px 10px 0px"
+})
+@Html.TextBox("SearchQuery", "", new
+{
+    @class = "form-control pull-right",
+    @id = "searchQuery",
+    @style = "margin-top: 20px; margin-bottom: 10px",
+    @placeholder = Resource.MES_SearchTest
+})
+
+<table class="table">
+    <tr class="info">
+        <th>
+            @Html.DisplayNameFor(model => model.TestName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeLimit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttemptsCount)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="item">
+            <td>
+                @Html.ActionLink(item.TestName, "TestDetails", 
+                    new { testId = item.TestID }, 
+                    new { @id = "itemName" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeLimit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttemptsCount)
+            </td>
+            <td>
+                @Html.ActionLink(Resource.BTN_Delete, "DeleteTest",
+                    new { testId = item.TestID },
+                    new { @class = "btn btn-danger pull-right deleteBtn" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/filterByName.js")
+@Scripts.Render("~/Scripts/modalWindow.js")
+@Scripts.Render("~/Scripts/deleteConfirmation.js")

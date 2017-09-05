@@ -1,0 +1,31 @@
+﻿@model IEnumerable<TestingSystem.Models.QuestionWithThemeViewModel>
+
+<table class="table">
+    <tr class="info">
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QuestionType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThemeName)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class="item">
+            <td>
+                @Html.ActionLink(item.QuestionText, "QuestionDetails", new { questionId = item.QuestionID }, new { @id = "firstItemName", @class = "infoBtn" })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuestionType)
+            </td>
+            <td>
+                @Html.ActionLink(item.ThemeName, "ThemeDetails", new { themeId = item.ThemeID }, new { @id = "secondItemName" })
+            </td>
+        </tr>
+    }
+</table>
+@Scripts.Render("~/Scripts/modalWindow.js")

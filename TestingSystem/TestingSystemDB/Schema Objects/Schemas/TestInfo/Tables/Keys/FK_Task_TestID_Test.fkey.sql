@@ -1,0 +1,2 @@
+﻿ALTER TABLE [TestInfo].[Task]
+    ADD CONSTRAINT [FK_Task_TestID_Test] FOREIGN KEY ([TestID]) REFERENCES [TestInfo].[Test] ([TestID]) ON DELETE CASCADE ON UPDATE NO ACTION;

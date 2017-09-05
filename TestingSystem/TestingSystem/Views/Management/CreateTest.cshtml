@@ -1,0 +1,50 @@
+﻿@model TestingSystem.Models.CreatingTestQuestionsViewModel
+@using TestingSystem.Resources
+
+@{
+    ViewBag.Title = Resource.TITLE_TestCreating;
+}
+
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog"></div>
+</div>
+
+<h2>@Resource.TITLE_TestCreating</h2>
+
+@using (Html.BeginForm("CreateTest", "Management", FormMethod.Post, new { @id="form0" }))
+{
+    @Html.AntiForgeryToken()
+    
+        @Html.LabelFor(model => model.TestName)
+        @Html.EditorFor(model => model.TestName, new { htmlAttributes = new { @class = "form-control", @id = "testName" } })
+
+    @Html.LabelFor(model => model.TimeLimit)
+    @Html.EditorFor(model => model.TimeLimit, new { htmlAttributes = new { @class = "form-control", @id = "timeLimit" } })
+
+    @Html.LabelFor(model => model.AttemptsCount)
+    @Html.EditorFor(model => model.AttemptsCount, new { htmlAttributes = new { @class = "form-control", @id = "attemptsCount" } })
+
+    @Html.TextBox("SearchQuery", "", new
+       {
+           @class = "form-control pull-right",
+           @id = "searchQuery",
+           @style = "margin: 20px 0px 10px 0px",
+           @placeholder = "Поиск по темам и вопросам"
+       })
+
+    <input type="submit" class="btn btn-primary" style="margin: 20px 10px 10px 0px" 
+       value=@Resource.BTN_CreateTest>
+
+    @Html.ActionLink(Resource.BTN_BackToTests, "Tests", null, new
+    {
+        @class = "btn btn-info",
+        @style = "margin: 20px 10px 10px 0px"
+    })
+
+    @Html.Partial("_CreatingTestQuestionsPartial", Model.Questions)
+}
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/filterByTwoNames.js")
+@Scripts.Render("~/Scripts/modalWindow.js")
+@Scripts.Render("~/Scripts/createTest.js")

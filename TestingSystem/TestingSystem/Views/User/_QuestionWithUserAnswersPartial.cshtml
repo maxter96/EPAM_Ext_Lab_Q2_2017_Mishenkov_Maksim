@@ -1,0 +1,25 @@
+﻿@model TestingSystem.Models.QuestionWithUserAnswerViewModel
+
+<table class="table">
+    <tr class="success">
+        <th colspan="2">
+            @Model.QuestionText
+        </th>
+    </tr>
+
+    @foreach (var answer in Model.Answers)
+    {
+        <tr>
+            <td width="50px">
+                @Html.CheckBoxFor(item => answer.IsChecked, new
+                {
+                     @id = answer.AnswerID,
+                     @class = "answerItem"
+                })
+            </td>
+            <td>
+                @Html.DisplayFor(item => answer.AnswerText)
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<TestingSystem.Models.UserRatingViewModel>
+@using TestingSystem.Resources
+
+<table class="table">
+    <tr class="info">
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Resource.FIELD_Score
+        </th>
+        @if (User.IsInRole("Admin"))
+        {
+            <th></th>
+        }
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr class = "item">
+            <td>
+                @if (!User.IsInRole("Admin"))
+                {
+                    <p id="itemName">@item.UserName</p>
+                }
+                else
+                {
+                    <p>
+                        @Html.ActionLink(item.UserName, "MyTests", new { @userId = item.UserID }, new { @id = "itemName" })
+                    </p>
+                }
+            </td>
+            <td>
+                @item.Score / @item.QuestionsCount
+            </td>
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    @Html.ActionLink(Resource.BTN_Delete, 
+                        "DeleteUser", 
+                        new { @userId = item.UserID }, 
+                        new { @class="btn btn-danger pull-right deleteBtn" })
+                </td>
+            }
+        </tr>
+    }
+</table>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/filterByName.js")
+@Scripts.Render("~/Scripts/deleteConfirmation.js")

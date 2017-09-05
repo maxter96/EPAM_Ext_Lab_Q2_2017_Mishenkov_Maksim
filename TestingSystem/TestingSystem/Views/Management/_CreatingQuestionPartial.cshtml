@@ -1,0 +1,78 @@
+﻿@model TestingSystem.Models.CreatingQuestionViewModel
+@using TestingSystem.Resources
+
+<style>
+    td {
+        padding: 5px;
+    }
+</style>
+
+@using (Html.BeginForm("CreateQuestion", "Management", FormMethod.Post, new { @id = "form0" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <button class="close" data-dismiss="modal" area-hidden="true">X</button>
+            <h4>@Resource.MES_CreateQuestion</h4>
+        </div>
+        <div class="modal-body">
+            @Html.HiddenFor(model => model.ThemeID, new { @id = "themeId" })
+            <table>
+                <tr>
+                    <td colspan="2">
+                        @Html.LabelFor(model => model.QuestionText)
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        @Html.TextAreaFor(model => model.QuestionText, new
+                   {
+                       @class = "form-control",
+                       @cols = 100,
+                       @rows = 2,
+                       @style = "resize:none",
+                       @id = "questionText",
+                       @placeHolder = Resource.MES_EnterQuestionText
+                   })
+                    </td>
+                </tr>
+                <tr>
+                    <td>@Html.Label(Resource.FIELD_AnswerText)</td>
+                    <td>@Html.Label(Resource.FIELD_IsCorrect)</td>
+                </tr>
+                @foreach (var item in Model.Answers)
+                {
+                    <tr class="answerItem">
+                       <td>
+                       @Html.TextArea("answerText", new
+                       {
+                           @id = "answerText",
+                           @class = "form-control",
+                           @cols = 100,
+                           @rows = 2,
+                           @style = "resize:none",
+                           @placeHolder = Resource.MES_EnterAnswerText
+                       })
+                        </td>
+                        <td>
+                            <input class = "form-control" id = "isCorrect" name="isCorrect" type="checkbox" disabled="disabled">
+                        </td>
+                    </tr>
+}
+            </table>
+        </div>
+
+        <div class="modal-footer">
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+                @Resource.BTN_Cancel
+            </button>
+
+            <input type="submit" id="submitBtn" class="btn btn-primary" 
+                value=@Resource.BTN_Create />
+        </div>
+    </div>
+}
+
+@Scripts.Render("~/Scripts/createQuestion.js")

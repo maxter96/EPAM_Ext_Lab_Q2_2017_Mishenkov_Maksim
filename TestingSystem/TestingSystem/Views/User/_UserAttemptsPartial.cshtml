@@ -1,0 +1,50 @@
+﻿@model IEnumerable<TestingSystem.Models.UserAttemptViewModel>
+@using TestingSystem.Resources
+
+<table class="table">
+    <tr class="info">
+        <th>
+            @Html.DisplayNameFor(model => model.AttemptNumber)
+        </th>
+        <th>
+            @Resource.FIELD_Score
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @string.Format("{0}{1}",Resource.MES_Attempt, item.AttemptNumber)
+            </td>
+            <td>
+                @item.Score
+            </td>
+            <td>
+                @string.Format("{0}", item.Time == -1 ? "n/a" : item.Time.ToString())
+            </td>
+            <td>
+                @if (item.Time == -1 && !User.IsInRole("Admin"))
+                {
+                    @Html.ActionLink(Resource.BTN_ContinueAttempt, 
+                        "RunTest", 
+                        new { @testId = item.TestID}, 
+                        new { @class = "btn btn-primary pull-right" })
+                }
+                else
+                {
+                    @Html.ActionLink(Resource.BTN_SeeResult, 
+                        "TestSessionResult", 
+                        new { @testSessionId = item.TestSessionID, @userId = item.UserID },
+                        new { @class = "btn btn-primary pull-right" })
+                }
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,33 @@
+﻿@model TestingSystem.Models.TestDetailsViewModel
+@using TestingSystem.Resources
+
+@{
+    ViewBag.Title = Resource.TITLE_Test + ": " + Model.TestName;
+}
+
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog"></div>
+</div>
+
+<h2>@Resource.MES_TestQuestions : "@Model.TestName"</h2>
+
+<div>
+    @Html.TextBox("SearchQuery", "", new
+    {
+        @class = "form-control pull-right",
+        @id = "searchQuery",
+        @style = "margin: 20px 0px 10px 0px",
+        @placeholder = Resource.MES_SearchThemeAndQuestion
+    })
+
+    @Html.ActionLink(Resource.BTN_BackToTests, "Tests", null, new
+    {
+        @class = "btn btn-info",
+        @style = "margin: 20px 10px 10px 0px"
+    })
+    @Html.Partial("_QuestionsWithThemesPartial", Model.Questions)
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/filterByTwoNames.js")
+@Scripts.Render("~/Scripts/modalWindow.js")

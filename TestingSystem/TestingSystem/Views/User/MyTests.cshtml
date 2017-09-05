@@ -1,0 +1,23 @@
+﻿@model TestingSystem.Models.UserResultsViewModel
+@using TestingSystem.Resources
+
+@{
+    ViewBag.Title = Resource.TITLE_MyTests;
+}
+
+<h2>@Resource.TITLE_MyTests</h2>
+
+<h2 style="float:left">@Model.UserName</h2>
+
+@Html.TextBox("SearchQuery", "", new
+{
+    @class = "form-control pull-right",
+    @id = "searchQuery",
+    @style = "margin: 20px 0px 10px 0px",
+    @placeholder = Resource.MES_SearchTest
+})
+
+@Html.Partial("_UserTestsPartial", Model.Tests)
+@Scripts.Render("~/Bundles/jquery")
+@Scripts.Render("~/Scripts/filterByName.js")
+

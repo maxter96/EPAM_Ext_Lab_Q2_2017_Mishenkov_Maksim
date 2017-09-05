@@ -1,0 +1,8 @@
+﻿CREATE TABLE [UserInfo].[User]
+(
+	[UserID] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Login] NVARCHAR(20) NOT NULL, 
+    [Password] UNIQUEIDENTIFIER NOT NULL, 
+    [FirstName] NVARCHAR(20) NOT NULL, 
+    [LastName] NVARCHAR(20) NOT NULL
+)

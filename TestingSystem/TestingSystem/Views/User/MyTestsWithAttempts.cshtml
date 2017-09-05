@@ -1,0 +1,26 @@
+﻿@model TestingSystem.Models.UserTestWithSessionsViewModel
+@using TestingSystem.Resources
+
+@{
+    ViewBag.Title = Resource.TITLE_MyAttempts;
+}
+
+<h2>@Resource.TITLE_MyAttempts : "@Model.TestName"</h2>
+<h2 style="float:left">@Resource.FIELD_RemainingAttempts : @Html.DisplayFor(model => Model.AttemptsLeft)</h2>
+
+@Html.ActionLink(Resource.BTN_BackToTests, 
+    "MyTests",
+    new { testId = Model.TestID, userId = Model.UserID },
+    new { @class = "btn btn-info pull-right", @style = "margin: 20px 0px 10px 0px" })
+
+    @Html.Partial("_UserAttemptsPartial", Model.Sessions)
+
+@if ((Model.AttemptsLeft > 0 && Model.Sessions.Where(x => x.Time == -1).Count() == 0) && !User.IsInRole("Admin"))
+{
+    @Html.ActionLink(Resource.BTN_StartNewAttempt, 
+        "RunTest", 
+        new { testId = Model.TestID }, 
+        new { @class = "btn btn-primary" })
+}
+
+

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [TestInfo].[Task]
+(
+	[TaskID] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [QuestionID] INT NOT NULL, 
+    [TestID] INT NOT NULL
+)

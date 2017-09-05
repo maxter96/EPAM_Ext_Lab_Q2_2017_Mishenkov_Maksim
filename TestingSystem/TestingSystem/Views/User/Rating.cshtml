@@ -1,0 +1,36 @@
+﻿@model TestingSystem.Models.RatingViewModel
+@using TestingSystem.Resources
+
+@{
+    ViewBag.Title = Resource.TITLE_Rating;
+}
+
+<h2>@Resource.TITLE_Rating</h2>
+<h2>@Resource.TITLE_Theme : "@Model.RatingName"</h2>
+<h2 style="float:left; margin: 20px 10px 10px 0px">Выбрать тему:</h2>
+
+<select class="form-control" id="sorting" style="float:left; margin: 20px 10px 10px 0px">
+    <option id="0">@Resource.MES_CommonRating</option>
+    @foreach (var theme in ViewBag.Themes)
+    {
+        <option id="@theme.ThemeID">@theme.ThemeName</option>
+    }
+</select>
+
+<button id="sortBtn" class="btn btn-primary" style="float:left; margin: 20px 10px 10px 0px">
+    @Resource.BTN_Apply
+</button>
+
+@Html.TextBox("SearchQuery", "", new
+{
+    @class = "form-control pull-right",
+    @id = "searchQuery",
+    @style = "margin: 20px 0px 10px 0px",
+    @placeholder = Resource.MES_SearchUser
+})
+
+<div>
+    @Html.Partial("_UsersRatingPartial", Model.Users)
+</div>
+
+@Scripts.Render("~/Scripts/changeSorting.js")

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<TestingSystem.Models.UserTestViewModel>
+
+<table class="table">
+    <tr class="info">
+        <th>
+            @Html.DisplayNameFor(model => model.TestName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RemainingAttempts)
+        </th>
+        <th>
+            Score
+        </th>
+    </tr>
+
+    @foreach(var item in Model)
+    {
+        <tr class="item">
+            <td>
+                @Html.ActionLink(item.TestName, "TestResults", new { @testId = item.TestID, @userId = item.UserID }, new { @id = "itemName" })
+            </td>
+            <td>
+                @Html.DisplayFor(x => item.RemainingAttempts)
+            </td>
+            <td>
+                @item.LastScore / @item.QuestionsCount
+            </td>
+        </tr>
+    }
+</table>

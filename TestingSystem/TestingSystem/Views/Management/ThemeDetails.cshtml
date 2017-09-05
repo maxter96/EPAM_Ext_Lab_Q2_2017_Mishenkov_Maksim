@@ -1,0 +1,42 @@
+﻿@model TestingSystem.Models.ThemeDetailsViewModel
+@using TestingSystem.Resources
+
+@{
+    ViewBag.Title = Resource.TITLE_Theme + ": " + Model.ThemeName;
+}
+
+<div id="modDialog" class="modal fade">
+    <div id="dialogContent" class="modal-dialog"></div>
+</div>
+
+<h2>Редактирование темы: "@Model.ThemeName"</h2>
+<div>
+    @Html.TextBox("SearchQuery", "", new
+    {
+        @class = "form-control pull-right",
+        @id = "searchQuery",
+        @style = "margin: 20px 0px 10px 0px",
+        @placeholder = Resource.MES_SearchQuestion
+    })
+    @Html.ActionLink(Resource.BTN_CreateQuestion, 
+        "CreateQuestion", 
+        new { themeId = Model.ThemeID }, 
+        new {
+            @class = "btn btn-primary",
+            @id = "createBtn",
+            @style = "margin: 20px 10px 10px 0px"
+        })
+    @Html.ActionLink(Resource.BTN_BackToThemes, 
+        "Themes", 
+        null, 
+        new {
+            @class = "btn btn-info",
+            @style = "margin: 20px 10px 10px 0px"
+        })
+    @Html.Partial("_ThemeQuestionsPartial", Model.Questions)
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/filterByName.js")
+@Scripts.Render("~/Scripts/modalWindow.js")
+@Scripts.Render("~/Scripts/deleteConfirmation.js")

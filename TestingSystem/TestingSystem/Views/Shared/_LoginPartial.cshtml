@@ -1,0 +1,15 @@
+﻿@using TestingSystem.Resources;
+
+@if (User.Identity.IsAuthenticated)
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink(Resource.TITLE_LogOff + string.Format(" ({0})", User.Identity.Name), "LogOff", "Account")</li>
+    </ul>
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink(Resource.TITLE_Register, "Register", "Account")</li>
+        <li>@Html.ActionLink(Resource.TITLE_LogOn, "LogOn", "Account")</li>
+    </ul>
+}

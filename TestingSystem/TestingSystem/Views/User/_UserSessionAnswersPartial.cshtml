@@ -1,0 +1,33 @@
+﻿@model TestingSystem.Models.QuestonWithResultViewModel
+@using TestingSystem.Resources
+
+<table class="table">
+    @{
+        var c = Model.Points > 0 ? "success" : "danger";
+    }
+
+    <tr class=@c>
+        <th colspan="2">
+            @Model.QuestionText
+        </th>
+        <th>
+            <p class="pull-right">@Resource.FIELD_Points: @Model.Points</p>
+        </th>
+    </tr>
+
+    @foreach (var answer in Model.Answers)
+    {
+        <tr>
+            <td width="50px">
+                @Html.DisplayFor(item => answer.IsChecked)
+            </td>
+            <td colspan="2">
+                @Html.DisplayFor(item => answer.AnswerText)
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+

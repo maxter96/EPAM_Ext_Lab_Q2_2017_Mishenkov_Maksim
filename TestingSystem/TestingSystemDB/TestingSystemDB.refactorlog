@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="f34fe430-c746-4d85-a07c-23d12183f28a" ChangeDateTime="08/28/2017 12:22:00">
+    <Property Name="ElementName" Value="[dbo].[Theme].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Theme]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ThemeID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9b60f77e-be86-44a3-9910-f111a31f3289" ChangeDateTime="08/28/2017 12:23:27">
+    <Property Name="ElementName" Value="[dbo].[Question].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Question]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QuestionID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5a2f0989-d858-42a2-8ad0-e301c38ce8dc" ChangeDateTime="08/28/2017 12:25:17">
+    <Property Name="ElementName" Value="[dbo].[Answer].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Answer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AnswerID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3f379540-aa6a-49fb-8f02-b56527fb654a" ChangeDateTime="08/28/2017 12:26:15">
+    <Property Name="ElementName" Value="[dbo].[Answer].[IsRight]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Answer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="IsCorrect" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="60fb2eb7-69df-4168-98d4-693358c79aab" ChangeDateTime="08/28/2017 12:27:35">
+    <Property Name="ElementName" Value="[dbo].[Test].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Test]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TestID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="98532a8f-2405-42ab-a8ab-1a79a60e3d19" ChangeDateTime="08/28/2017 12:28:12">
+    <Property Name="ElementName" Value="[dbo].[Question].[Text]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Question]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QuestionText" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1c5b45d3-6285-4aa7-8936-0e4233f9b848" ChangeDateTime="08/28/2017 12:28:15">
+    <Property Name="ElementName" Value="[dbo].[Question].[Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Question]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QuestionType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1ead5bbe-23db-4a64-bd27-5ded60cac40f" ChangeDateTime="08/28/2017 12:28:31">
+    <Property Name="ElementName" Value="[dbo].[Answer].[Text]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Answer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AnswerText" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="907cbe76-e7fc-4dfc-afd1-d07b7a82f762" ChangeDateTime="08/28/2017 12:29:29">
+    <Property Name="ElementName" Value="[dbo].[Task].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Task]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TaskID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="214f9234-4c73-474d-8d8a-0fe55f410f0f" ChangeDateTime="08/28/2017 12:30:54">
+    <Property Name="ElementName" Value="[dbo].[UserAnswer].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[UserAnswer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AnswerID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a41fc9f6-c7a5-41b4-9e3d-1f16f4f649b1" ChangeDateTime="08/28/2017 12:31:00">
+    <Property Name="ElementName" Value="[dbo].[UserAnswer].[AnswerID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[UserAnswer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserAnswerID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7cd17dd7-08c2-406e-9b65-5ab2b6b8c14b" ChangeDateTime="08/28/2017 17:19:34">
+    <Property Name="ElementName" Value="[dbo].[TestStatistic].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TestStatistic]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TestStatisticId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="899e1e99-55ca-4c7c-bc60-bfd134eef58c" ChangeDateTime="08/28/2017 17:20:35">
+    <Property Name="ElementName" Value="[dbo].[TestStatistic].[Time]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TestStatistic]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TestTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e9de0c1d-c3fb-4f0e-9b45-bca2fe62952e" ChangeDateTime="08/28/2017 17:22:12">
+    <Property Name="ElementName" Value="[TestInfo].[Test].[TestTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TestInfo].[Test]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TimeLimit" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ae2a4133-a0c6-4098-84a8-8f1920216aac" ChangeDateTime="08/28/2017 17:22:22">
+    <Property Name="ElementName" Value="[dbo].[TestStatistic].[TestTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TestStatistic]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Time" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="17a28e49-9177-437d-a5a4-7a6d9406e547" ChangeDateTime="08/28/2017 17:24:11">
+    <Property Name="ElementName" Value="[dbo].[TestStatistic].[RightAnswers]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[TestStatistic]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Percentage" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="241bcf49-dc06-4ebf-91c0-af9ebadafd5f" ChangeDateTime="08/28/2017 17:25:44">
+    <Property Name="ElementName" Value="[dbo].[ThemeStatistic].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ThemeStatistic]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ThemeStatisticId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="832f278d-0669-45a3-82d8-3147610a629b" ChangeDateTime="08/29/2017 08:48:59">
+    <Property Name="ElementName" Value="[TestInfo].[TestSession].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TestInfo].[TestSession]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TestSessionID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="33b279be-8261-4903-b41d-a4727ace9531" ChangeDateTime="08/29/2017 08:57:41">
+    <Property Name="ElementName" Value="[TestInfo].[UserAnswer].[UserID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TestInfo].[UserAnswer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TestSessionID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d088fc64-7bea-42b0-b33a-16d130c2c9cd" ChangeDateTime="08/29/2017 09:02:44">
+    <Property Name="ElementName" Value="[TestInfo].[UserAnswer].[TaskID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TestInfo].[UserAnswer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QuestionID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="83bcd194-2e02-4fa9-8875-fb22a7171929" ChangeDateTime="08/29/2017 09:19:58">
+    <Property Name="ElementName" Value="[TestInfo].[TestSession].[StartTime]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TestInfo].[TestSession]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BeginTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1f163f76-0d6d-4acb-8c6f-b60e3afcb5b8" ChangeDateTime="08/29/2017 09:20:03">
+    <Property Name="ElementName" Value="[TestInfo].[TestSession].[Time]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TestInfo].[TestSession]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EndTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8ecf7182-4824-4bbc-9891-affd003a6b0b" ChangeDateTime="08/29/2017 09:20:14">
+    <Property Name="ElementName" Value="[TestInfo].[TestSession].[Percentage]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TestInfo].[TestSession]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Time" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0a6cb61a-4f2a-4d6d-a7d6-87af0b5e0d0a" ChangeDateTime="08/29/2017 09:32:53">
+    <Property Name="ElementName" Value="[TestInfo].[ThemeStatistic].[TestStatisticID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TestInfo].[ThemeStatistic]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TestSessionID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="06167488-d21e-4dca-9406-4d04cbc2abcd" ChangeDateTime="08/29/2017 09:33:33">
+    <Property Name="ElementName" Value="[TestInfo].[ThemeStatistic].[ThemeStatisticId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TestInfo].[ThemeStatistic]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ThemeStatisticID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="81588439-52e5-40ce-9c51-330f198715ca" ChangeDateTime="08/29/2017 17:25:00">
+    <Property Name="ElementName" Value="[TestInfo].[TestSession].[Percentage]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TestInfo].[TestSession]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QuestionsCount" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d27685b0-72a8-4f43-84ad-144d19d17f77" ChangeDateTime="08/29/2017 17:28:24">
+    <Property Name="ElementName" Value="[TestInfo].[ThemeStatistic].[Percentage]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[TestInfo].[ThemeStatistic]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="QuestionsCount" />
+  </Operation>
+</Operations>

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<TestingSystem.Models.AnswerViewModel>
+
+<table class="table">
+    <tr class="info">
+        <th>
+            @Html.DisplayNameFor(model => model.IsCorrect)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnswerText)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr class="success">  
+        @Html.HiddenFor(modelItem => item.AnswerID)
+        <td>
+            @Html.DisplayFor(modelItem => item.IsCorrect)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnswerText)
+        </td>
+    </tr>
+}
+
+</table>

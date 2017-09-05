@@ -1,0 +1,31 @@
+﻿@model TestingSystem.Models.RunningTestViewModel
+@using TestingSystem.Resources
+
+@{
+    ViewBag.Title = Resource.TITLE_RunTest;
+}
+
+<h2 style="float:left">@Model.TestName</h2>
+
+<div class="pull-right" >
+    <h2>@Resource.MES_RemainingTime:</h2> 
+    <h2 id="remainingTime"></h2>
+</div>
+
+
+
+@Html.HiddenFor(model => Model.TestSessionID, new { @id = "testSessionId" })
+@Html.HiddenFor(model => Model.UserID, new { @id = "userId" })
+
+<div>
+    @foreach (var question in Model.Questions)
+    {
+        @Html.Partial("_QuestionWithUserAnswersPartial", question);
+    }
+</div>
+<button class = "btn btn-primary" id="endTestSession">
+    @Resource.BTN_EndTest
+</button>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/runTestSession.js")

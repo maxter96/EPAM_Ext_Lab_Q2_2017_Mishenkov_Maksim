@@ -1,0 +1,24 @@
+﻿@model TestingSystem.Models.UserTestSessionResultViewModel
+@using TestingSystem.Resources
+
+@{
+    ViewBag.Title = Resource.TITLE_TestSessionResults;
+}
+
+<h2>@Resource.TITLE_TestSessionResults</h2>
+
+<h2>@Resource.TITLE_Test: @Model.TestName</h2>
+
+<h2 style="float:left">@Resource.MES_Result: @Model.Score</h2>
+
+@Html.ActionLink(Resource.BTN_BackToAttempts, 
+    "TestResults",
+    new { testId = Model.TestID, userId = Model.UserID },
+    new { @class = "btn btn-info pull-right", @style = "margin: 20px 0px 10px 0px" })
+
+@foreach (var question in Model.Questions)
+{
+    @Html.Partial("_UserSessionAnswersPartial", question)
+}
+
+
